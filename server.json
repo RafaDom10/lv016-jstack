@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "123",
+      "name": "Rafael Domingues",
+      "username": "RafaDom10",
+      "blocked": true
+    },
+    {
+      "id": "1234",
+      "name": "Ana Carolina",
+      "username": "carolina-mcd",
+      "blocked": false
+    },
+    {
+      "id": "1235",
+      "name": "Mateus Silva",
+      "username": "maateusilva",
+      "blocked": false
+    }
+  ]
+}

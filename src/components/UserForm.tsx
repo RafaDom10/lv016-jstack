@@ -8,7 +8,7 @@ export function UserForm() {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
 
-  const { createUser, isLoading } = useCreateUser();
+  const { createUser } = useCreateUser();
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -18,12 +18,11 @@ export function UserForm() {
         username,
         blocked: false
       });
-      toast.success('Usuário cadastrado com sucesso!');
-    } catch {
-      toast.error('Erro ao cadastrar usuário!');
-    } finally {
+
       setName('');
       setUsername('');
+    } catch {
+      toast.error('Erro ao cadastrar usuário!');
     }
   }
 
@@ -41,7 +40,7 @@ export function UserForm() {
           onChange={event => setUsername(event.target.value)}
         />
       </div>
-      <Button className="mt-2 w-full" disabled={isLoading}>
+      <Button className="mt-2 w-full">
         Cadastrar
       </Button>
     </form>

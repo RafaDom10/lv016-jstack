@@ -4,6 +4,7 @@ import { Switch } from "./ui/Switch";
 import { Skeleton } from "./ui/Skeleton";
 import { useUpdateUser } from "@/app/hooks/useUpdateUser";
 import { toast } from "sonner";
+import { cn } from "@/app/lib/utils";
 
 export function UsersList() {
   const { users, isLoading } = useUsers();
@@ -11,14 +12,12 @@ export function UsersList() {
 
   async function handleBlockedUser(id: string, blocked: boolean) {
     try {
-      const t = await updateUser({
+      await updateUser({
         id,
         blocked
       });
-      console.log(t)
-      toast.success('Usuário atualizado com sucesso!');
     } catch {
-      toast.error('Erro ao atualizar usuário!');
+      toast.error('Erro ao atualizar usuário!')
     }
   }
 
@@ -34,7 +33,11 @@ export function UsersList() {
       {users.map(user => (
         <div
           key={user.id}
-          className="border p-4 rounded-md flex items-center justify-between"
+          className={cn(
+            "border p-4 rounded-md flex items-center justify-between",
+            user.status === 'pending' && 'opacity-70',
+            user.status === 'error' && 'border-destructive bg-destructive/10'
+          )}
         >
           <div className=" flex items-center gap-4">
             <Avatar>
@@ -48,7 +51,8 @@ export function UsersList() {
             </div>
           </div>
           <Switch
-            // checked={user.blocked}
+            disabled={user.status === 'pending' || user.status === 'error'}
+            checked={user.blocked}
             onCheckedChange={(blocked) => handleBlockedUser(user.id, blocked)}
           />
         </div>

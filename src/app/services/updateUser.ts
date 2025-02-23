@@ -1,11 +1,8 @@
-import { sleep } from "../lib/utils";
 import { IUser } from "../types/IUser"
 
 type IUpdateUserDTO = Partial<Omit<IUser, 'id'>> & { id: string }
 
 export async function updateUser({ id, name, username, blocked }: IUpdateUserDTO): Promise<IUser> {
-  await sleep();
-
   const response = await fetch(`http://localhost:3000/users/${id}`, {
     method: 'PATCH',
     headers: {

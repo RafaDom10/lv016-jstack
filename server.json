@@ -13,9 +13,15 @@
       "blocked": false
     },
     {
-      "id": "5afa",
-      "name": "Rafael Domingues",
+      "id": "af8f",
+      "name": "rafael",
       "username": "RafaDom10",
+      "blocked": false
+    },
+    {
+      "id": "6f1d",
+      "name": "rafael",
+      "username": "rafaeld",
       "blocked": true
     }
   ]

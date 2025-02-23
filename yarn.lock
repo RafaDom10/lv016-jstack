@@ -1341,6 +1341,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.66.4":
+  version: 5.66.4
+  resolution: "@tanstack/query-core@npm:5.66.4"
+  checksum: 947d89e844e46d8a13f2ba412227f534ab2d3c7a2f8c09ea3f00b5962ad0eadef94eeec67f61269990a0db23ce13d89df8f62de8bf98976ebda51e014ecbf811
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-devtools@npm:5.65.0":
+  version: 5.65.0
+  resolution: "@tanstack/query-devtools@npm:5.65.0"
+  checksum: 6c33dfcca8e1cee18f313598982b23fa95c18f60f2cd1b7d852f36c2f4399cfa3e743d1b26580406029a169f263f1e3b22dbbf58e8bd2e0c70cfe91af26bd5fd
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query-devtools@npm:^5.66.9":
+  version: 5.66.9
+  resolution: "@tanstack/react-query-devtools@npm:5.66.9"
+  dependencies:
+    "@tanstack/query-devtools": 5.65.0
+  peerDependencies:
+    "@tanstack/react-query": ^5.66.9
+    react: ^18 || ^19
+  checksum: bf581c1a6b7081a7473eafd8569ac0ecee74953f4307411e4e188f03e3af5e7332e6f04ea33781838ff9ae30af8cb1c2542c97b608d28ea4ea51ee4f6f7a4790
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.66.9":
+  version: 5.66.9
+  resolution: "@tanstack/react-query@npm:5.66.9"
+  dependencies:
+    "@tanstack/query-core": 5.66.4
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: f81de05a362fc8e1d4d44353ff1c8abba0ca268f1c856b63eeaf50bcdba23c7a003045fdafe7540975d432c50f53af9041174d6eeb9fd8e2d8564591603533f4
+  languageName: node
+  linkType: hard
+
 "@tinyhttp/accepts@npm:2.2.3":
   version: 2.2.3
   resolution: "@tinyhttp/accepts@npm:2.2.3"
@@ -3674,6 +3711,8 @@ eslint@latest:
     "@radix-ui/react-slot": ^1.1.2
     "@radix-ui/react-switch": ^1.1.3
     "@tailwindcss/vite": ^4.0.8
+    "@tanstack/react-query": ^5.66.9
+    "@tanstack/react-query-devtools": ^5.66.9
     "@types/node": ^22.13.5
     "@types/react": ^19.0.8
     "@types/react-dom": ^19.0.3
@@ -3688,8 +3727,10 @@ eslint@latest:
     globals: ^15.14.0
     json-server: ^1.0.0-beta.3
     lucide-react: ^0.475.0
+    next-themes: ^0.4.4
     react: ^19.0.0
     react-dom: ^19.0.0
+    sonner: ^2.0.1
     tailwind-merge: ^3.0.1
     tailwindcss: ^4.0.8
     tailwindcss-animate: ^1.0.7
@@ -3954,6 +3995,16 @@ eslint@latest:
   version: 1.0.0
   resolution: "negotiator@npm:1.0.0"
   checksum: 20ebfe79b2d2e7cf9cbc8239a72662b584f71164096e6e8896c8325055497c96f6b80cd22c258e8a2f2aa382a787795ec3ee8b37b422a302c7d4381b0d5ecfbb
+  languageName: node
+  linkType: hard
+
+"next-themes@npm:^0.4.4":
+  version: 0.4.4
+  resolution: "next-themes@npm:0.4.4"
+  peerDependencies:
+    react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+    react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+  checksum: 9107fd68152eec5e4681e18c7ddbf17f8d4d65abc0ff3b17f6f5d8ee61d2b2106ee5f26d93942da52799214354eed3bb5d4a76a8bf2c7274e73ac09467441390
   languageName: node
   linkType: hard
 
@@ -4726,6 +4777,16 @@ eslint@latest:
     ip-address: ^9.0.5
     smart-buffer: ^4.2.0
   checksum: cd1edc924475d5dfde534adf66038df7e62c7343e6b8c0113e52dc9bb6a0a10e25b2f136197f379d695f18e8f0f2b7f6e42977bf720ddbee912a851201c396ad
+  languageName: node
+  linkType: hard
+
+"sonner@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "sonner@npm:2.0.1"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 6e9dd5ce098e0832694a5bffd25849277f1fae21dca54201fa87da88eb2eaf450f138d2bb1442643ac95f7b5deebe97d8859f7d934693877ca81325d64e93eb2
   languageName: node
   linkType: hard
 
